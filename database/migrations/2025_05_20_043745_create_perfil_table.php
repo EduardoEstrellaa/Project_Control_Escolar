@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('perfil', function (Blueprint $table) {
-            $table->integer('idperfil')->primary();
+            $table->unsignedBigInteger('idperfil')->primary();
             $table->string('nombre');
             $table->string('apellido');
             $table->dateTime('fecha_nacimiento');

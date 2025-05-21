@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('telefono_perfil', function (Blueprint $table) {
             $table->integer('idtelefono_perfil')->primary();
-            $table->integer('perfil_idperfil');
+            $table->unsignedBigInteger('perfil_idperfil');
             $table->string('numero_telefonico', 15);
             $table->timestamps();
 
