@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('semestres', function (Blueprint $table) {
-            $table->integer('idsemestres')->primary();
+            $table->unsignedBigInteger('idsemestres')->primary();
             $table->string('nombre_semestre', 45);
             $table->timestamps();
         });
